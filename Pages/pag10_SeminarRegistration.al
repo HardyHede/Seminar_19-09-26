@@ -5,7 +5,7 @@ page 50110 "CSD Seminar Registration"
     //     - Created new page
 
     Caption = 'Seminar Registration';
-    PageType = Card;
+    PageType = Document;
     SourceTable = "CSD Seminar Reg. Header";
     UsageCategory = tasks;
 
