@@ -1,0 +1,26 @@
+{
+  "id": "94b6efc6-6ad5-4718-81eb-af0d35298fee",
+  "name": "SD Seminar",
+  "publisher": "D. E. Velopper",
+  "version": "1.0.0.0",
+  "brief": "Brief project Description",
+  "description": "Longer project description",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./images/actona-logo.jpg",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://SDSeminar1.com/help/",
+  "showMyCode": true,
+  "runtime": "3.2"
+}
