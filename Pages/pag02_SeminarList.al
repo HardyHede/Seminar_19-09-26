@@ -4,6 +4,7 @@ page 50102 "CSD Seminar List"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "CSD Seminar";
+    Caption = 'Seminar List';
     Editable = false;
     CardPageId = 50101;
 
