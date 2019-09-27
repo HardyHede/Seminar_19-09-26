@@ -1,8 +1,6 @@
 page 50107 "CSD Seminar Comment List"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
     SourceTable = "CSD Seminar Comment Line";
     Caption = 'Seminar Comment List';
 

@@ -1,8 +1,6 @@
 page 50106 "CSD Seminar Comment Sheet"
 {
     PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
     SourceTable = "CSD Seminar Comment Line";
     Caption = 'Seminar Comment Line';
     AutoSplitKey = true;
