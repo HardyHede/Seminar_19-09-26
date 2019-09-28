@@ -3,9 +3,15 @@ table 50132 "CSD Seminar Ledger Entry"
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 7 - Lab 1
     //     - Created new table
+    // CSD1.00 - 2019-09-28 - Hardy Hede Nielsen
+    // Chapter 8 - Lab 2 - Task 1
+    // Chapter 8 - Lab 2 - 3
+    // Added LookupPageId & DrilldownPageId properties
+
 
     Caption = 'Seminar Ledger Entry';
-
+    LookupPageId = "CSD Seminar Ledger Entries";
+    DrillDownPageId = "CSD Seminar Ledger Entries";
     fields
     {
         field(1; "Entry No."; Integer)
@@ -156,6 +162,9 @@ table 50132 "CSD Seminar Ledger Entry"
     keys
     {
         key(Key1; "Entry no.")
+        {
+        }
+        key(key2; "Document No.", "Posting Date")
         {
         }
     }
