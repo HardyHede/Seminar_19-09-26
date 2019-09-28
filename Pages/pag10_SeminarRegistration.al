@@ -1,4 +1,7 @@
 page 50110 "CSD Seminar Registration"
+// CSD1.00 - 2019-09-28 - Hardy Hede Nielsen
+// Chapter 9 - Lab 1 - Task 8
+
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 6 - Lab 3-1
@@ -144,6 +147,20 @@ page 50110 "CSD Seminar Registration"
                     Image = Costs;
                     RunObject = Page 50124;
                     RunPageLink = "Document No." = Field ("No.");
+                }
+                action("&Print")
+                {
+                    Caption = '&Print';
+                    Image = Print;
+                    Promoted = true;
+                    PromotedIsBig = true;
+                    PromotedCategory = Process;
+                    trigger OnAction();
+                    var
+                        SeminarReportSelection: Record "CSD Seminar Report Selections";
+                    begin
+                        SeminarReportSelection.PrintReportSelection(SeminarReportSelection.Usage::Registration, Rec);
+                    end;
                 }
             }
         }
