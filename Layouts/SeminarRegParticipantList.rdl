@@ -11,52 +11,6 @@
       <rd:DataSourceID>4e8f5626-cf93-4b69-8e4a-ade62edde088</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="SeminarNo_">
-          <DataField>SeminarNo_</DataField>
-        </Field>
-        <Field Name="SeminarName">
-          <DataField>SeminarName</DataField>
-        </Field>
-        <Field Name="StartingDate">
-          <DataField>StartingDate</DataField>
-        </Field>
-        <Field Name="Duration">
-          <DataField>Duration</DataField>
-        </Field>
-        <Field Name="DurationFormat">
-          <DataField>DurationFormat</DataField>
-        </Field>
-        <Field Name="InstructorName">
-          <DataField>InstructorName</DataField>
-        </Field>
-        <Field Name="RoomName">
-          <DataField>RoomName</DataField>
-        </Field>
-        <Field Name="BillToCustNo">
-          <DataField>BillToCustNo</DataField>
-        </Field>
-        <Field Name="ParticipantContentNo">
-          <DataField>ParticipantContentNo</DataField>
-        </Field>
-        <Field Name="ParticipantName">
-          <DataField>ParticipantName</DataField>
-        </Field>
-        <Field Name="CompanyName">
-          <DataField>CompanyName</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1059,7 +1013,7 @@
               <Top>0in</Top>
               <Left>0in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>2.32292in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1078,7 +1032,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Globals!ExecutionTime</Value>
-                      <Style />
+                      <Style>
+                        <Format>d</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1107,11 +1063,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Globals!PageNumber</Value>
-                      <Style />
-                    </TextRun>
-                    <TextRun>
-                      <Value>&amp; “ of “ &amp; Globals!TotalPages</Value>
+                      <Value>=Globals!PageNumber &amp; “ of “ &amp; Globals!TotalPages</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -1150,9 +1102,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox130</rd:DefaultName>
               <Top>0.5in</Top>
-              <Left>5.5in</Left>
+              <Left>4.71875in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>1.78125in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -1182,7 +1134,7 @@
               <Top>0.26389in</Top>
               <Left>0in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>2.32292in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1308,8 +1260,65 @@
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfColumns>1</NumberOfColumns>
+      <NumberOfRows>11</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>SeminarRegistrationHeaderCap</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>No_Caption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>SeminarNo_Caption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>SeminarNameCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>4</RowIndex>
+          <ParameterName>StartingDateCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>5</RowIndex>
+          <ParameterName>DurationCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>6</RowIndex>
+          <ParameterName>InstructorNameCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>RoomNameCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>8</RowIndex>
+          <ParameterName>BillToCustNoCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>9</RowIndex>
+          <ParameterName>ParticipantContentNoCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>10</RowIndex>
+          <ParameterName>ParticipantNameCaption</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
@@ -1351,4 +1360,50 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="SeminarNo_">
+          <DataField>SeminarNo_</DataField>
+        </Field>
+        <Field Name="SeminarName">
+          <DataField>SeminarName</DataField>
+        </Field>
+        <Field Name="StartingDate">
+          <DataField>StartingDate</DataField>
+        </Field>
+        <Field Name="Duration">
+          <DataField>Duration</DataField>
+        </Field>
+        <Field Name="DurationFormat">
+          <DataField>DurationFormat</DataField>
+        </Field>
+        <Field Name="InstructorName">
+          <DataField>InstructorName</DataField>
+        </Field>
+        <Field Name="RoomName">
+          <DataField>RoomName</DataField>
+        </Field>
+        <Field Name="BillToCustNo">
+          <DataField>BillToCustNo</DataField>
+        </Field>
+        <Field Name="ParticipantContentNo">
+          <DataField>ParticipantContentNo</DataField>
+        </Field>
+        <Field Name="ParticipantName">
+          <DataField>ParticipantName</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
